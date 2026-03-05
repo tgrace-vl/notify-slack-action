@@ -278,3 +278,4 @@ This project uses [SemVer](http://semver.org/) for versioning. For the versions 
 <small>&copy; 2022 RavSam Web Solutions</small>
 # PoC test
 # trigger
+# retry

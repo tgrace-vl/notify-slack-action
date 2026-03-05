@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get Node Version
         id: node_version
@@ -20,13 +20,13 @@ jobs:
           echo "Node Version: $node_version"
 
       - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ steps.node_version.outputs.node_version }}
 
       - name: Cache NPM Dependencies
         id: cache-npm-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
